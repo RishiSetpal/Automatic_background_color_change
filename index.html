@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Auto Change Colour</title>
+    <style>
+        * {
+            font-size: 150%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: cadetblue;
+        }
+    </style>
+    <script>
+        let changeBgColor = () => {
+            let colours = ["antiquewhite", "aqua", "aquamarine", "bisque", "burlywood", "chartreuse", "violet", "teal", "steelblue", "yellowgreen"]
+            let index = parseInt(Math.random() * colours.length);
+            document.body.style.backgroundColor = colours[index];
+        }
+        setInterval(() => changeBgColor(), 500);
+
+        // unable to use use automaticlly
+        // changeBgColor();
+        // solution: use it in body tag instead of head
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Auto Change Colour</h1>
+    </center>
+
+</body>
+
+</html>
